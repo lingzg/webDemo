@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.elvis.webDemo.core.system.dao.SysUserDao">
+	
+	<select id="findAll" resultType="com.elvis.webDemo.core.system.model.SysUser">
+    select id userId, user_name userName, password, nick_name nickName
+      from t_base_user_info
+	    <!-- <if test="org_id!=null and org_id !=''">
+	        and i.org_id=#{org_id}
+	    </if> -->
+	</select>
+	
+	<select id="findPage" parameterType="com.elvis.webDemo.core.system.model.vo.SysUserVO" resultType="com.elvis.webDemo.core.system.model.SysUser">
+    select id userId, user_name userName, password, nick_name nickName
+      from t_base_user_info
+      limit #{startRow},#{size}
+    </select>
+    
+    <select id="findPageCount" parameterType="com.elvis.webDemo.core.system.model.vo.SysUserVO" resultType="int">
+    select count(1)
+      from t_base_user_info
+    </select>
+	
+	<select id="getById" parameterType="String" resultType="com.elvis.webDemo.core.system.model.SysUser">
+    select id userId, user_name userName, password, nick_name nickName
+      from t_base_user_info
+      where id=#{userId}
+    </select>
+    
+    <update id="update" parameterType="String">
+    update t_base_user_info
+      set user_name=#{userName}
+      where id=#{userId}
+    </update>
+    
+    <insert id="save" parameterType="com.elvis.webDemo.core.system.model.SysUser" useGeneratedKeys="true" keyProperty="userId">
+    insert into t_base_user_info(user_name,nick_name,password)
+      values(#{userName},#{nickName},#{password})
+    </insert>
+    
+    <delete id="delete" parameterType="String">
+    delete from t_base_user_info where id=#{userId}
+    </delete>
+
+</mapper>

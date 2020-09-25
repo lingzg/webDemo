@@ -1,0 +1,325 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.elvis</groupId>
+  <artifactId>webDemo</artifactId>
+  <version>1.0.0</version>
+  <packaging>war</packaging>
+  
+  	<properties>
+		<java.version>1.8</java.version>
+		<spring.version>4.3.2.RELEASE</spring.version>
+		<poi.version>3.13</poi.version>
+		<pdfbox.version>2.0.4</pdfbox.version>
+		<jackson.version>2.9.4</jackson.version>
+		<httpclient.version>4.5</httpclient.version>
+  	</properties>
+	
+	<dependencies>
+		<!-- spring begin -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-core</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-aop</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-core</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-aspects</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-beans</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context-support</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-expression</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jms</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-messaging</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-orm</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-test</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-tx</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-web</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-webmvc</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-websocket</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<!-- spring end -->
+		
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.17</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.2.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-spring</artifactId>
+		    <version>1.2.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>1.2.73</version>
+		</dependency>
+		<dependency>
+	        <groupId>log4j</groupId>
+	        <artifactId>log4j</artifactId>
+	        <version>1.2.17</version>
+	    </dependency>
+	    <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+		    <groupId>commons-beanutils</groupId>
+		    <artifactId>commons-beanutils</artifactId>
+		    <version>1.7.0</version>
+		</dependency>
+	    <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+		<dependency>
+		    <groupId>commons-codec</groupId>
+		    <artifactId>commons-codec</artifactId>
+		    <version>1.9</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-collections</groupId>
+		    <artifactId>commons-collections</artifactId>
+		    <version>3.2</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-fileupload</groupId>
+		    <artifactId>commons-fileupload</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.6</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-lang</groupId>
+		    <artifactId>commons-lang</artifactId>
+		    <version>2.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.8</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-logging</groupId>
+		    <artifactId>commons-logging</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+		<dependency>
+		    <groupId>commons-dbcp</groupId>
+		    <artifactId>commons-dbcp</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-pool2</artifactId>
+		    <version>2.4.2</version>
+		</dependency>
+	    
+		
+		<!-- poi begin -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-examples</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-excelant</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>ooxml-schemas</artifactId>
+		    <version>1.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>ooxml-security</artifactId>
+		    <version>1.1</version>
+		</dependency>
+		<!-- poi end -->
+		
+		<!-- pdfbox begin -->
+		<dependency>
+		    <groupId>org.apache.pdfbox</groupId>
+		    <artifactId>pdfbox</artifactId>
+		    <version>${pdfbox.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.pdfbox</groupId>
+		    <artifactId>fontbox</artifactId>
+		    <version>${pdfbox.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.pdfbox</groupId>
+		    <artifactId>pdfbox-tools</artifactId>
+		    <version>${pdfbox.version}</version>
+		</dependency>
+		<!-- pdfbox end -->
+		
+		<dependency>
+		    <groupId>fr.opensagres.xdocreport</groupId>
+		    <artifactId>xdocreport</artifactId>
+		    <version>1.0.6</version>
+		</dependency>
+		
+		<!-- jackson end -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		    <version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-annotations</artifactId>
+		    <version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>${jackson.version}</version>
+		</dependency>
+		<!-- jackson end -->
+		
+		<!-- httpclient begin -->
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>${httpclient.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient-cache</artifactId>
+		    <version>${httpclient.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient-win</artifactId>
+		    <version>${httpclient.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpmime</artifactId>
+		    <version>${httpclient.version}</version>
+		</dependency>
+		<!-- httpclient begin -->
+		
+		<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+		<dependency>
+		    <groupId>redis.clients</groupId>
+		    <artifactId>jedis</artifactId>
+		    <version>2.9.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl -->
+		<dependency>
+		    <groupId>javax.servlet.jsp.jstl</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		<!-- jstl-api -->
+        <dependency>
+            <groupId>javax.servlet.jsp.jstl</groupId>
+            <artifactId>jstl-api</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <!-- jstl-impl -->
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jstl-impl</artifactId>
+            <version>1.2</version>
+        </dependency>
+		
+	</dependencies>
+	
+</project>
